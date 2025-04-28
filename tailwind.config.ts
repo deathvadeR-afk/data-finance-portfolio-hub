@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,36 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				navy: {
+					50: '#f0f3f9',
+					100: '#d0dae8',
+					200: '#b3c2db',
+					300: '#92a9cc',
+					400: '#7692be',
+					500: '#5a7cb2',
+					600: '#48648f',
+					700: '#354b6b',
+					800: '#233247',
+					900: '#111924',
+				},
+				gold: {
+					50: '#fafaf5',
+					100: '#f1f0e0',
+					200: '#e4e2c6',
+					300: '#d6d3a9',
+					400: '#c8c68b',
+					500: '#b9b66c',
+					600: '#979257',
+					700: '#716d41',
+					800: '#4b482c',
+					900: '#252415',
+				},
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Poppins', 'sans-serif'],
+				mono: ['Fira Code', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -70,25 +100,27 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1', transform: 'translateY(0)' },
+					'100%': { opacity: '0', transform: 'translateY(10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'fade-out': 'fade-out 0.5s ease-out forwards'
 			}
 		}
 	},
